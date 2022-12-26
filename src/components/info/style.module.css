@@ -1,0 +1,17 @@
+.info {
+    width: 700px;
+    border: 1px solid gray;
+    padding: 20px;
+    margin: 50px;
+    background: whitesmoke;
+}
+
+.info .btn {
+    margin-left: 10px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
