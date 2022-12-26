@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './style.module.css'
-import {Button} from "@mui/material";
+import {Button, TextField} from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 
 
@@ -70,12 +70,16 @@ export default class Info extends React.Component {
     return (
       <div className={styles.info}>
         <form onSubmit={this.handleSubmitForm}>
-          <input
+          <TextField
+            id="standard-basic"
+            label="enter title text"
+            variant="outlined"
             type="text"
-            placeholder='enter title text'
+            // placeholder='enter title text'
             value={this.state.postTitle}
             onChange={this.handleChangeInput}
           />
+
           <Button
             variant="contained"
             type='submit'
@@ -93,6 +97,7 @@ export default class Info extends React.Component {
                 onClick={() => this.handleDelete(item.id)}
                 startIcon={<DeleteIcon/>}
               >Delete</Button>
+              {/*//*/}
             </div>
           )
         })}
